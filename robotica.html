@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="es" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Carrera de Ingeniería en Automatización y Robótica - FISEI" />
+    <meta
+      name="author"
+      content="FISEI - Facultad de Ingeniería en Sistemas, Electrónica e Industrial"
+    />
+    <title>Robótica - FISEI</title>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/carousel/"
+    />
+    <script src="../assets/js/color-modes.js"></script>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <link href="carousel.css" rel="stylesheet" />
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: #0000001a;
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow:
+          inset 0 0.5em 1.5em #0000001a,
+          inset 0 0.125em 0.5em #00000026;
+      }
+      .hero-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 120px 0 80px 0;
+        margin-top: 56px;
+      }
+      .mission-vision-section {
+        padding: 80px 0;
+        background-color: #f8f9fa;
+      }
+      .card-custom {
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .card-custom:hover {
+        transform: translateY(-5px);
+      }
+      .icon-large {
+        font-size: 3rem;
+        color: #667eea;
+      }
+    </style>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+        ></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path
+          d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
+        ></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+        ></path>
+        <path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+        ></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+        ></path>
+      </symbol>
+    </svg>
+
+    <!-- Selector de tema -->
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)"
+      >
+        <svg class="bi my-1 theme-icon-active" aria-hidden="true">
+          <use href="#circle-half"></use>
+        </svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="light"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#sun-fill"></use>
+            </svg>
+            Light
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="dark"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#moon-stars-fill"></use>
+            </svg>
+            Dark
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center active"
+            data-bs-theme-value="auto"
+            aria-pressed="true"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#circle-half"></use>
+            </svg>
+            Auto
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Header -->
+    <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">FISEI</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="robotica.html">Robótica</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Horario</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Buscar
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Sección Hero -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h1 class="display-4 fw-bold mb-4">
+                Ingeniería en Automatización y Robótica
+              </h1>
+              <p class="lead mb-4">
+                Forma parte del futuro tecnológico con nuestra carrera de vanguardia que combina 
+                la automatización industrial y la robótica avanzada para crear soluciones innovadoras.
+              </p>
+              <div class="d-flex gap-3">
+                <a 
+                  href="https://fisei.uta.edu.ec/v4.0/index.php/carreras-y-programas/robotica" 
+                  class="btn btn-primary btn-lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Más Información
+                </a>
+                <a href="#mission-vision" class="btn btn-outline-light btn-lg">
+                  Conoce Más
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="text-center">
+                <svg
+                  class="bd-placeholder-img img-fluid rounded"
+                  width="500"
+                  height="400"
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  aria-label="Robótica"
+                  preserveAspectRatio="xMidYMid slice"
+                >
+                  <title>Robótica</title>
+                  <rect width="100%" height="100%" fill="#ffffff20"></rect>
+                  <text x="50%" y="50%" fill="white" dy=".3em" class="h3">
+                    🤖 ROBÓTICA
+                  </text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Misión y Visión -->
+      <section id="mission-vision" class="mission-vision-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 mb-5">
+              <div class="card card-custom h-100">
+                <div class="card-body p-5">
+                  <div class="text-center mb-4">
+                    <div class="icon-large">🎯</div>
+                    <h2 class="card-title h3 mt-3">Misión</h2>
+                  </div>
+                  <p class="card-text">
+                    Formar profesionales líderes competentes, con visión humanista y
+                    pensamiento crítico, a través de la Docencia, la Investigación y la
+                    Vinculación, que apliquen, promuevan y difundan el conocimiento
+                    respondiendo a las necesidades del país.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 mb-5">
+              <div class="card card-custom h-100">
+                <div class="card-body p-5">
+                  <div class="text-center mb-4">
+                    <div class="icon-large">🚀</div>
+                    <h2 class="card-title h3 mt-3">Visión</h2>
+                  </div>
+                  <p class="card-text">
+                    Ser la Carrera líder de la región, alcanzando niveles de excelencia
+                    en la formación integral de los estudiantes, con líneas de
+                    investigación aplicadas, cuerpo académico consolidado y alianzas
+                    estratégicas nacionales para la transferencia y desarrollo
+                    tecnológico, contribuyendo al desarrollo socioeconómico del país,
+                    revelando modos de actuación, principios éticos y morales propios
+                    del Ingeniero en Automatización y Robótica.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Características -->
+      <section class="py-5">
+        <div class="container">
+          <div class="row text-center mb-5">
+            <div class="col">
+              <h2 class="display-5 fw-bold">¿Por qué estudiar Robótica?</h2>
+              <p class="lead text-muted">
+                Descubre las ventajas de formar parte de esta carrera innovadora
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 mb-4">
+              <div class="card card-custom h-100 text-center">
+                <div class="card-body p-4">
+                  <div class="icon-large mb-3">⚙️</div>
+                  <h3 class="card-title h5">Tecnología Avanzada</h3>
+                  <p class="card-text">
+                    Aprende con equipos de última generación y tecnologías emergentes 
+                    en automatización y robótica.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+              <div class="card card-custom h-100 text-center">
+                <div class="card-body p-4">
+                  <div class="icon-large mb-3">🔬</div>
+                  <h3 class="card-title h5">Investigación Aplicada</h3>
+                  <p class="card-text">
+                    Participa en proyectos de investigación que impactan directamente 
+                    en la industria y la sociedad.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+              <div class="card card-custom h-100 text-center">
+                <div class="card-body p-4">
+                  <div class="icon-large mb-3">🌟</div>
+                  <h3 class="card-title h5">Futuro Prometedor</h3>
+                  <p class="card-text">
+                    Forma parte de una de las carreras con mayor proyección 
+                    profesional en el siglo XXI.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Call to Action -->
+      <section class="py-5 bg-dark text-white">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="display-6 fw-bold mb-4">
+                ¿Listo para ser parte del futuro?
+              </h2>
+              <p class="lead mb-4">
+                Únete a nuestra comunidad de futuros ingenieros en automatización y robótica. 
+                Descubre todas las oportunidades que tenemos para ti.
+              </p>
+              <a 
+                href="https://fisei.uta.edu.ec/v4.0/index.php/carreras-y-programas/robotica" 
+                class="btn btn-primary btn-lg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Más Información Oficial
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="container py-5">
+        <div class="row">
+          <div class="col-12 col-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="d-block mb-2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="10,8 16,12 10,16 10,8"></polygon>
+            </svg>
+            <small class="d-block mb-3 text-muted">&copy; 2017–2025 FISEI - UTA</small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Enlaces</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary" href="index.html">Inicio</a></li>
+              <li><a class="link-secondary" href="nosotros.html">Nosotros</a></li>
+              <li><a class="link-secondary" href="robotica.html">Robótica</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Recursos</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary" href="https://fisei.uta.edu.ec/v4.0/index.php/bibliotecas">Biblioteca</a></li>
+              <li><a class="link-secondary" href="https://ctt-talleresfisei.uta.edu.ec/">CTT - Talleres</a></li>
+              <li><a class="link-secondary" href="https://fisei.uta.edu.ec/v4.0/index.php/servicios">Servicios</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Acerca de</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary" href="#">Política de privacidad</a></li>
+              <li><a class="link-secondary" href="#">Términos</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between py-4 my-4 border-top">
+          <p class="float-end"><a href="#">Volver arriba</a></p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
